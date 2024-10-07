@@ -1,3 +1,4 @@
+console.log("app.js file start running run")
 import express from "express";
 import dotenv from "dotenv";
 import "express-async-errors";
