@@ -28,9 +28,10 @@ import errorHandlerMiddleware from "./middlewares/error-handler.js";
 import morgan from "morgan";
 import authenticateUser from "./middlewares/auth.js";
 
-app.use(morgan("dev"));
+
+app.use(express.json());
 if (process.env.NODE_ENV !== "production") {
-  app.use(express.json());
+  app.use(morgan("dev"));
 }
 
 app.get("/api/v1", (req, res) => {
