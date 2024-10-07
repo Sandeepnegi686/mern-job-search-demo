@@ -98,7 +98,7 @@ function AppProvider({ children }) {
     dispatch({ type: REGISTER_USER_BEGIN });
     try {
       const { data } = await axios.post(
-        `${serverURL}/api/v1/auth/register`,
+        `${serverURL}/auth/register`,
         currentUser
       );
       const { user, token } = data;
@@ -119,7 +119,7 @@ function AppProvider({ children }) {
 
     try {
       const { data } = await axios.post(
-        `${serverURL}/api/v1/auth/login`,
+        `${serverURL}/auth/login`,
         currentUser
       );
       const { user, token } = data;
